@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\unreal_capstone\\source\\unreal_capstone\\unreal_capstone.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\unreal_capstone\\intermediate\\build\\win64\\x64\\unreal_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\unreal_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unreal_capstone\\definitions.unreal_capstone.h",
+            "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\unreal_capstone\\source\\unreal_capstone\\unreal_capstone.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,7 @@
+.gitattributes
+.vs/
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Content/에셋
