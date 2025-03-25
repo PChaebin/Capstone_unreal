@@ -36,10 +36,10 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NOIMPLIB
-"C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\Unreal_CapstoneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\Unreal_Capstone.cpp.obj"
-"C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\PerModuleInline.gen.cpp.obj"
-"C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\Default.rc2.res"
+"D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\Unreal_CapstoneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\Unreal_Capstone.cpp.obj"
+"D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\PerModuleInline.gen.cpp.obj"
+"D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
@@ -70,6 +70,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Binaries\Win64\UnrealEditor-Unreal_Capstone.dll"
-/PDB:"C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Binaries\Win64\UnrealEditor-Unreal_Capstone.pdb"
+/OUT:"D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Binaries\Win64\UnrealEditor-Unreal_Capstone.dll"
+/PDB:"D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Binaries\Win64\UnrealEditor-Unreal_Capstone.pdb"
 /ignore:4078

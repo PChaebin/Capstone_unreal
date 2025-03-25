@@ -83,5 +83,5 @@
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
 /DPROJECT_PRODUCT_IDENTIFIER=Unreal_Capstone
-/fo "C:\Users\pcd02\Desktop\unreal_capstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\Default.rc2.res"
+/fo "D:\UnrealCapstone\Capstone_unreal\Unreal_Capstone\Intermediate\Build\Win64\x64\UnrealEditor\Development\Unreal_Capstone\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"
