@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Project_Capstone",
+			"Path": "..\\Source\\Project_Capstone.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Project_CapstoneEditor",
+			"Path": "..\\Source\\Project_CapstoneEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
