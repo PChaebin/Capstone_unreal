@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\UnrealCapstone\\Capstone_unreal\\Project_Capstone\\Source\\Project_Capstone\\Project_Capstone.Build.cs",
-		"D:\\UnrealCapstone\\Capstone_unreal\\Project_Capstone\\Source\\Project_Capstone.Target.cs",
-		"D:\\UnrealCapstone\\Capstone_unreal\\Project_Capstone\\Source\\Project_CapstoneEditor.Target.cs"
+		"C:\\Users\\pcd02\\Desktop\\unreal_capstone\\Capstone_unreal\\Project_Capstone\\Source\\Project_Capstone\\Project_Capstone.Build.cs",
+		"C:\\Users\\pcd02\\Desktop\\unreal_capstone\\Capstone_unreal\\Project_Capstone\\Source\\Project_Capstone.Target.cs",
+		"C:\\Users\\pcd02\\Desktop\\unreal_capstone\\Capstone_unreal\\Project_Capstone\\Source\\Project_CapstoneEditor.Target.cs"
 	],
 	"EngineVersion": "5.5.4"
 }

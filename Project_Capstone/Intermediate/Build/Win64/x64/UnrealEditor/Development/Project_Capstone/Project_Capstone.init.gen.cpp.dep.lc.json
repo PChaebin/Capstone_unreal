@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\project_capstone.init.gen.cpp",
+        "Source": "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\project_capstone.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h"
+            "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

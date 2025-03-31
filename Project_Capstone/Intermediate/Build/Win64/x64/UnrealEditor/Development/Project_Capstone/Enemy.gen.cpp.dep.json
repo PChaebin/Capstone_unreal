@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\enemy.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h",
+            "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\enmey\\enemy.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\users\\pcd02\\desktop\\unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\enemy.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
