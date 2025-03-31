@@ -5,6 +5,10 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/UnrealCapstone/Capstone_unreal/Project_Capstone/Content/Characters/Enemy/BP_Enemy.uasset",
+				"D:/UnrealCapstone/Capstone_unreal/Project_Capstone/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/HF/9H7TKAXH9DD8KI3TIXGI2I.uasset",
+				"D:/UnrealCapstone/Capstone_unreal/Project_Capstone/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/B4/C9PDPFH71BXQ4TWCHISOXC.uasset",
+				"D:/UnrealCapstone/Capstone_unreal/Project_Capstone/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/E/8S/GK7I6SW6FXBLBJNKBJDARF.uasset",
 				"C:/Users/pcd02/Desktop/unreal_capstone/Capstone_unreal/Project_Capstone/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset"
 			]
 		}

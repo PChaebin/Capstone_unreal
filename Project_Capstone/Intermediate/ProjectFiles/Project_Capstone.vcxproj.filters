@@ -11,6 +11,8 @@
     <None Include="..\..\Source\Project_CapstoneEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore.txt" />
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -52,6 +54,30 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Project_Capstone\Project_CapstoneGameMode.h">
       <Filter>Source\Project_Capstone</Filter>
+    </ClCompile>
+    <Filter Include="Source\Project_Capstone\Private">
+      <UniqueIdentifier>{845D7F19-B075-3FD0-8688-6781E1B373F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Project_Capstone\Private\Enmey">
+      <UniqueIdentifier>{B905F688-7627-3F69-B4D7-C1C311FC6252}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\Enemy.cpp">
+      <Filter>Source\Project_Capstone\Private\Enmey</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\EnemyMelee.cpp">
+      <Filter>Source\Project_Capstone\Private\Enmey</Filter>
+    </ClCompile>
+    <Filter Include="Source\Project_Capstone\Public">
+      <UniqueIdentifier>{D222D98B-16B8-3652-A6B7-F69A5635CEBB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Project_Capstone\Public\Enmey">
+      <UniqueIdentifier>{7547654B-E77E-378C-AD5C-A8AA7E160262}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\Enemy.h">
+      <Filter>Source\Project_Capstone\Public\Enmey</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\EnemyMelee.h">
+      <Filter>Source\Project_Capstone\Public\Enmey</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
