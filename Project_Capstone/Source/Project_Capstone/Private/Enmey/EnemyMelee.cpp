@@ -5,5 +5,5 @@
 
 AEnemyMelee::AEnemyMelee()
 {
-	// 생성자 로직을 여기에 추가 (기본적으로 AEnemy 생성자 호출 가능)
+	
 }

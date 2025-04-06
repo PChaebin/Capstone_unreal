@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\private\\enmey\\enemymelee.cpp",
+        "Source": "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\private\\enmey\\enemymelee.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h",
-            "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\enmey\\enemymelee.h",
-            "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\enmey\\enemy.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\enmey\\enemymelee.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\enmey\\enemy.h",
             "d:\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "d:\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "d:\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
@@ -17,8 +17,8 @@
             "d:\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "d:\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "d:\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\enemy.generated.h",
-            "d:\\unrealcapstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\enemymelee.generated.h"
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\enemy.generated.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\enemymelee.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

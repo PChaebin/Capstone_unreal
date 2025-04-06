@@ -64,6 +64,9 @@
     <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\Enemy.cpp">
       <Filter>Source\Project_Capstone\Private\Enmey</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\EnemyAnimInstance.cpp">
+      <Filter>Source\Project_Capstone\Private\Enmey</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\EnemyMelee.cpp">
       <Filter>Source\Project_Capstone\Private\Enmey</Filter>
     </ClCompile>
@@ -80,6 +83,9 @@
       <UniqueIdentifier>{7547654B-E77E-378C-AD5C-A8AA7E160262}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\Enemy.h">
+      <Filter>Source\Project_Capstone\Public\Enmey</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\EnemyAnimInstance.h">
       <Filter>Source\Project_Capstone\Public\Enmey</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\EnemyMelee.h">

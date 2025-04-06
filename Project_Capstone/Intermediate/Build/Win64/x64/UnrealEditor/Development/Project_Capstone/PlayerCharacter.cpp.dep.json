@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\private\\player\\playercharacter.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\player\\playercharacter.h",
+            "d:\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "d:\\ue_5.5\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\playercharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
