@@ -18,17 +18,23 @@ void AEnemy::BeginPlay()
 	
 }
 
+void AEnemy::EnemyMainAttack() {
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Called from enemy class"));
+}
+
+void AEnemy::MeleeHit_Implementation(FHitResult HitResult) {
+	// Do impact sound
+
+	// play niagra effects 
+	
+	// play hit montage
+	IMeleeHitInterface::MeleeHit_Implementation(HitResult);
+}
+
 // Called every frame
 void AEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-}
-
-// Called to bind functionality to input
-void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
 

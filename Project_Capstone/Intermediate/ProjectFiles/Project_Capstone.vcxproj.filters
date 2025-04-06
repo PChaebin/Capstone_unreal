@@ -70,10 +70,16 @@
     <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\EnemyMelee.cpp">
       <Filter>Source\Project_Capstone\Private\Enmey</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Private\Enmey\MeleeHitInterface.cpp">
+      <Filter>Source\Project_Capstone\Private\Enmey</Filter>
+    </ClCompile>
     <Filter Include="Source\Project_Capstone\Private\Player">
       <UniqueIdentifier>{769275AC-934B-392B-853A-80C17E2D2FE5}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project_Capstone\Private\Player\PlayerCharacter.cpp">
+      <Filter>Source\Project_Capstone\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Private\Player\PlayerCharacterInterface.cpp">
       <Filter>Source\Project_Capstone\Private\Player</Filter>
     </ClCompile>
     <Filter Include="Source\Project_Capstone\Public">
@@ -91,10 +97,16 @@
     <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\EnemyMelee.h">
       <Filter>Source\Project_Capstone\Public\Enmey</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Public\Enmey\MeleeHitInterface.h">
+      <Filter>Source\Project_Capstone\Public\Enmey</Filter>
+    </ClCompile>
     <Filter Include="Source\Project_Capstone\Public\Player">
       <UniqueIdentifier>{D6E71769-172B-36C0-9844-B1812AEBE3D0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project_Capstone\Public\Player\PlayerCharacter.h">
+      <Filter>Source\Project_Capstone\Public\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Project_Capstone\Public\Player\PlayerCharacterInterface.h">
       <Filter>Source\Project_Capstone\Public\Player</Filter>
     </ClCompile>
   </ItemGroup>

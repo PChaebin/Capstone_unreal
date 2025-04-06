@@ -13,12 +13,47 @@ void EmptyLinkFunctionForGeneratedCodeEnemy() {}
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 PROJECT_CAPSTONE_API UClass* Z_Construct_UClass_AEnemy();
 PROJECT_CAPSTONE_API UClass* Z_Construct_UClass_AEnemy_NoRegister();
+PROJECT_CAPSTONE_API UClass* Z_Construct_UClass_UMeleeHitInterface_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Project_Capstone();
 // End Cross Module References
+
+// Begin Class AEnemy Function EnemyMainAttack
+struct Z_Construct_UFunction_AEnemy_EnemyMainAttack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Enmey/Enemy.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemy_EnemyMainAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemy, nullptr, "EnemyMainAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemy_EnemyMainAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemy_EnemyMainAttack_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEnemy_EnemyMainAttack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemy_EnemyMainAttack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEnemy::execEnemyMainAttack)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EnemyMainAttack();
+	P_NATIVE_END;
+}
+// End Class AEnemy Function EnemyMainAttack
 
 // Begin Class AEnemy
 void AEnemy::StaticRegisterNativesAEnemy()
 {
+	UClass* Class = AEnemy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EnemyMainAttack", &AEnemy::execEnemyMainAttack },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AEnemy);
 UClass* Z_Construct_UClass_AEnemy_NoRegister()
@@ -60,6 +95,11 @@ struct Z_Construct_UClass_AEnemy_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEnemy_EnemyMainAttack, "EnemyMainAttack" }, // 1766512949
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemy>::IsAbstract,
 	};
@@ -81,18 +121,21 @@ UObject* (*const Z_Construct_UClass_AEnemy_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UPackage__Script_Project_Capstone,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AEnemy_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UMeleeHitInterface_NoRegister, (int32)VTABLE_OFFSET(AEnemy, IMeleeHitInterface), false },  // 1056268488
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AEnemy_Statics::ClassParams = {
 	&AEnemy::StaticClass,
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_AEnemy_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnemy_Statics::Class_MetaDataParams), Z_Construct_UClass_AEnemy_Statics::Class_MetaDataParams)
 };
@@ -116,10 +159,10 @@ AEnemy::~AEnemy() {}
 struct Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Enmey_Enemy_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemy, AEnemy::StaticClass, TEXT("AEnemy"), &Z_Registration_Info_UClass_AEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemy), 2492072208U) },
+		{ Z_Construct_UClass_AEnemy, AEnemy::StaticClass, TEXT("AEnemy"), &Z_Registration_Info_UClass_AEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemy), 881335184U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Enmey_Enemy_h_349331745(TEXT("/Script/Project_Capstone"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Enmey_Enemy_h_4227091040(TEXT("/Script/Project_Capstone"),
 	Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Enmey_Enemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Enmey_Enemy_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

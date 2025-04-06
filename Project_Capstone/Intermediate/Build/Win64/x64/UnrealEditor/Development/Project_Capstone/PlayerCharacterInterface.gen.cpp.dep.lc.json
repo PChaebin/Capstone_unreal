@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\playercharacterinterface.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\project_capstoneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\project_capstone\\definitions.project_capstone.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\source\\project_capstone\\public\\player\\playercharacterinterface.h",
+            "d:\\2025_unreal_capstone\\capstone_unreal\\project_capstone\\intermediate\\build\\win64\\unrealeditor\\inc\\project_capstone\\uht\\playercharacterinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "PlayerCharacterInterface.h"
 #include "PlayerCharacter.generated.h"
 
 UCLASS()
-class PROJECT_CAPSTONE_API APlayerCharacter : public ACharacter
+class PROJECT_CAPSTONE_API APlayerCharacter : public ACharacter, public IPlayerCharacterInterface
 {
 	GENERATED_BODY()
 

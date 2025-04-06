@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MeleeHitInterface.h"
 #include "GameFramework/Character.h"
 #include "Enemy.generated.h"
 
 UCLASS()
-class PROJECT_CAPSTONE_API AEnemy : public ACharacter
+class PROJECT_CAPSTONE_API AEnemy : public ACharacter, public IMeleeHitInterface
 {
 	GENERATED_BODY()
 
@@ -31,4 +32,12 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	float MaxHealth;
+
+	UFUNCTION(BlueprintCallable)
+	void EnemyMainAttack();
+
+public:
+
+	//override meleee hit interface
+	virtual void MeleeHit_Implementation(FHitResult HitResult) override;
 };

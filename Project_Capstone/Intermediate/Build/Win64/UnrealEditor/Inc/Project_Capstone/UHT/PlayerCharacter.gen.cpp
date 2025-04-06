@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 PROJECT_CAPSTONE_API UClass* Z_Construct_UClass_APlayerCharacter();
 PROJECT_CAPSTONE_API UClass* Z_Construct_UClass_APlayerCharacter_NoRegister();
+PROJECT_CAPSTONE_API UClass* Z_Construct_UClass_UPlayerCharacterInterface_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Project_Capstone();
 // End Cross Module References
 
@@ -35,6 +36,7 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APlayerCharacter>::IsAbstract,
 	};
@@ -45,6 +47,9 @@ UObject* (*const Z_Construct_UClass_APlayerCharacter_Statics::DependentSingleton
 	(UObject* (*)())Z_Construct_UPackage__Script_Project_Capstone,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_APlayerCharacter_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UPlayerCharacterInterface_NoRegister, (int32)VTABLE_OFFSET(APlayerCharacter, IPlayerCharacterInterface), false },  // 4014363163
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_APlayerCharacter_Statics::ClassParams = {
 	&APlayerCharacter::StaticClass,
 	"Game",
@@ -52,11 +57,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_APlayerCharacter_Static
 	DependentSingletons,
 	nullptr,
 	nullptr,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	0,
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_APlayerCharacter_Statics::Class_MetaDataParams)
 };
@@ -80,10 +85,10 @@ APlayerCharacter::~APlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Player_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 516595558U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 321372071U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Player_PlayerCharacter_h_318038504(TEXT("/Script/Project_Capstone"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Player_PlayerCharacter_h_2799710070(TEXT("/Script/Project_Capstone"),
 	Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Player_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_2025_Unreal_Capstone_Capstone_unreal_Project_Capstone_Source_Project_Capstone_Public_Player_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
