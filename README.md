@@ -19,7 +19,7 @@ unreal_1/Intermediate/
 unreal_1/Saved/
 unreal_1/DerivedDataCache/
 
-# Assets
+#Assets
 unreal_1/Content/ParagonGreystone/
 unreal_1/Content/ParagonSerath/
 
