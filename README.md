@@ -14,6 +14,10 @@
 
 
 # [.gitignore]
+
+![image](https://github.com/user-attachments/assets/67ac8ff5-93dd-4d6d-9749-6e324e1090f1)
+이렇게 추가되어야함
+
 unreal_1/Binaries/
 unreal_1/Intermediate/
 unreal_1/Saved/
