@@ -72,3 +72,13 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+
+unreal_1/Binaries/
+unreal_1/Intermediate/
+unreal_1/Saved/
+unreal_1/DerivedDataCache/
+
+# Assets
+unreal_1/Content/ParagonGreystone/
+unreal_1/Content/ParagonSerath/
