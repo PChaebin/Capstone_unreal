@@ -39,3 +39,9 @@ void AEnemy::Tick(float DeltaTime)
 
 }
 
+//test0413
+void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
+
