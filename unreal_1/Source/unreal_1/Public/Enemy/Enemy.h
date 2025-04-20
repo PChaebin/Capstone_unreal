@@ -32,8 +32,6 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	float MaxHealth;
 
-	UFUNCTION(BlueprintCallable)
-	void EnemyMainAttack();
 
 public:
 	//Override melee hit interface
