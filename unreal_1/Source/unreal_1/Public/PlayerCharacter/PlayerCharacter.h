@@ -31,6 +31,12 @@ protected:
 	// Move left and right
 	void MoveRight(float Value);
 
+	// Input to turn at normalized rate given
+	void TurnRate(float Value);
+
+	// Input to lookup or down at normalized rate given
+	void LookUpRate(float Value);
+
 private:
 	// Spring Arm Component
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
@@ -39,4 +45,12 @@ private:
 	// Follow Camera Component
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCameraComponent;
+
+	// Default turn rate
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	float DefaultTurnRate;
+
+	// Default LookUp rate
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	float DefaultLookUpRate;
 };
