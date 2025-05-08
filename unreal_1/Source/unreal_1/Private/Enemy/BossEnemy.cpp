@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Enemy/Enemy.h"
+#include "Enemy/BossEnemy.h"
 
 // Sets default values
-AEnemy::AEnemy()
+ABossEnemy::ABossEnemy()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -12,33 +12,23 @@ AEnemy::AEnemy()
 }
 
 // Called when the game starts or when spawned
-void AEnemy::BeginPlay()
+void ABossEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-
-void AEnemy::MeleeHit_Implementation(FHitResult HitResult)
-{
-	// Do impact sound
-
-	// Play niagra effects
-
-	// play hit montage
-
-}
-
 // Called every frame
-void AEnemy::Tick(float DeltaTime)
+void ABossEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
-//test0413
-void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+// Called to bind functionality to input
+void ABossEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
 }
 
