@@ -133,7 +133,7 @@ void APlayerCharacter::EnableWalk()
 
 void APlayerCharacter::MainAttack()
 {
-	PlayAnimMontage(MainAttackMontage, FName("MainAttack"));
+	PlayAnimMontage(MainAttackMontage, 1.0f, FName("MainAttack"));
 }
 
 // Called to bind functionality to input
