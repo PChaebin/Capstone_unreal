@@ -2,8 +2,8 @@
 
 
 #include "PlayerCharacter/PlayerAnimInstance.h"
-
 #include "PlayerCharacter/PlayerCharacter.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "TextureCompiler.h"
 
@@ -20,6 +20,9 @@ void UPlayerAnimInstance::UpdateAnimationProperties(float DeltaTime)
 		FVector Velocity = PlayerCharacter->GetVelocity();
 		Velocity.Z = 0;
 		Speed = Velocity.Size();
+
+
+		bIsInAir = PlayerCharacter->GetCharacterMovement()->IsFalling();
 
 		// Get offset yaw to user in blend spaces
 		FRotator AimRotation = PlayerCharacter->GetBaseAimRotation();

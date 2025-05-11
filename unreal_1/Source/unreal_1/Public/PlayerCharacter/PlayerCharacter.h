@@ -9,6 +9,7 @@
 //Declarations
 class USpringArmComponent;
 class UCameraComponent;
+class UAnimMontage;
 
 UCLASS()
 class UNREAL_1_API APlayerCharacter : public ACharacter
@@ -37,6 +38,19 @@ protected:
 	// Input to lookup or down at normalized rate given
 	void LookUpRate(float Value);
 
+	// Running
+	void Running();
+	void StopRunning();
+
+	// recall obility
+	void Recall();
+
+	void PlayCustomAnimMontage(UAnimMontage* MontageToPlay, FName SectionName = "Default");
+
+	void EnableWalk();
+
+	void MainAttack();
+
 private:
 	// Spring Arm Component
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
@@ -53,4 +67,18 @@ private:
 	// Default LookUp rate
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	float DefaultLookUpRate;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float WalkSpeed;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float RunSpeed;
+
+	FTimerHandle TimerMovementWalking;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Montage", meta = (AllowPrivateAccess = "true"))
+	UAnimMontage* RecallMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Montage", meta = (AllowPrivateAccess = "true"))
+	UAnimMontage* MainAttackMontage;
 };
