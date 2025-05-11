@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "PlayerCharacter/PlayerCharacterInterface.h"
 #include "PlayerCharacter.generated.h"
 
 //Declarations
@@ -12,7 +13,7 @@ class UCameraComponent;
 class UAnimMontage;
 
 UCLASS()
-class UNREAL_1_API APlayerCharacter : public ACharacter
+class UNREAL_1_API APlayerCharacter : public ACharacter, public IPlayerCharacterInterface
 {
 	GENERATED_BODY()
 
@@ -49,6 +50,7 @@ protected:
 
 	void EnableWalk();
 
+	//LMB main Attack
 	void MainAttack();
 
 private:
@@ -81,4 +83,5 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Montage", meta = (AllowPrivateAccess = "true"))
 	UAnimMontage* MainAttackMontage;
+
 };

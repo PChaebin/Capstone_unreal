@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MeleeHitInterface.h"
 #include "GameFramework/Character.h"
 #include "BossEnemy.generated.h"
 
 UCLASS()
-class UNREAL_1_API ABossEnemy : public ACharacter
+class UNREAL_1_API ABossEnemy : public ACharacter, public IMeleeHitInterface
 {
 	GENERATED_BODY()
 
@@ -18,23 +19,30 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
-	//Eenemy name to display on HUD
+	// Enemy name to display on HUD
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	FName EnemyName;
 
+	// Starting damage for enemy character
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	float BaseDamage;
 
+	// Current health of enemy
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	float Health;
 
+	// Maximum allowed health of enemy
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	float MaxHealth;
 
+public:
+
+	// Override melee hit interface
+	virtual  void MeleeHit_Implementation(FHitResult HitResult) override;
+	//virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 };

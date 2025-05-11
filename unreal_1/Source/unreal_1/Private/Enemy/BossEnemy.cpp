@@ -18,6 +18,15 @@ void ABossEnemy::BeginPlay()
 	
 }
 
+void ABossEnemy::MeleeHit_Implementation(FHitResult HitResult)
+{
+	// Do impact sound
+
+	// Play niagra affects
+
+	// play hit montage
+}
+
 // Called every frame
 void ABossEnemy::Tick(float DeltaTime)
 {
@@ -25,10 +34,5 @@ void ABossEnemy::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void ABossEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-}
 

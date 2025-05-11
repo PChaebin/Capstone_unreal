@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "TextureCompiler.h"
+#include "Enemy/MeleeHitInterface.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter() :
