@@ -35,7 +35,10 @@ private:
 	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float Speed;
 
+	// player is in the air?
+	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	bool bIsInAir;
+
 	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float MovementOffsetYaw;
-
 };
