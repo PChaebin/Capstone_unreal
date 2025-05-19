@@ -7,6 +7,8 @@
 #include "GameFramework/Character.h"
 #include "BossEnemy.generated.h"
 
+class ABossEnemyAIController;
+
 UCLASS()
 class UNREAL_1_API ABossEnemy : public ACharacter, public IMeleeHitInterface
 {
@@ -22,6 +24,10 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	// Enemy Controller
+	UPROPERTY()
+	ABossEnemyAIController* BossEnemyAIController;
 
 private:
 	// Enemy name to display on HUD
@@ -44,5 +50,8 @@ public:
 
 	// Override melee hit interface
 	virtual  void MeleeHit_Implementation(FHitResult HitResult) override;
-	//virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	// Getters
+	FORCEINLINE float GetBaseDamage() const { return  BaseDamage; }
 };

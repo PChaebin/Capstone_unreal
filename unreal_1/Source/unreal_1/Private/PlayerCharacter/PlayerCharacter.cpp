@@ -8,13 +8,17 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "TextureCompiler.h"
 #include "Enemy/MeleeHitInterface.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter() :
 	DefaultTurnRate(35.f),
 	DefaultLookUpRate(35.f),
 	WalkSpeed(250.0f),
-	RunSpeed(600.0f)
+	RunSpeed(600.0f),
+	BaseDamage(20.0f),
+	Health(100.f),
+	MaxHealth(100.f)
 {
 	SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>(TEXT("Spring Arm"));
 	SpringArmComponent->SetupAttachment(RootComponent);
@@ -150,10 +154,22 @@ void APlayerCharacter::MainAttack()
 void APlayerCharacter::OnRightWeaponOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
 	bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp, Warning, TEXT("OnRightWeaponOverlap called"));
-	if (GEngine)
+	if (IsValid(SweepResult.GetActor()))
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Apply damage"));
+		IMeleeHitInterface* MeleeHitInterface = Cast<IMeleeHitInterface>(SweepResult.GetActor());
+
+		if (MeleeHitInterface)
+		{
+			MeleeHitInterface->MeleeHit_Implementation(SweepResult);
+		}
+
+		// Apply damage to enemy
+		UGameplayStatics::ApplyDamage(
+			SweepResult.GetActor(),
+			BaseDamage,
+			GetController(),
+			this,
+			UDamageType::StaticClass());
 	}
 }
 
@@ -197,4 +213,28 @@ void APlayerCharacter::DeactivateRightWeapon()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Deactivate Weapon"));
 	RightWeaponCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision); 
+}
+
+
+
+float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
+	AActor* DamageCauser)
+{
+	if (Health - DamageAmount <= 0.f)
+	{
+		Health = 0.f;
+		
+		GetMesh()->SetSimulatePhysics(false);
+		GetMesh()->SetVisibility(false);
+		GetMesh()->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+		GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+		// Called in character blueprint
+		DeathOfPlayer();
+	}
+	else
+	{
+		Health -= DamageAmount;
+	}
+	return DamageAmount;
 }

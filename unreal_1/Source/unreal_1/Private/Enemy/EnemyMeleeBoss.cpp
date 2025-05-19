@@ -2,6 +2,11 @@
 
 
 #include "Enemy/EnemyMeleeBoss.h"
+
+#include "Enemy/BossEnemy.h"
+#include "PlayerCharacter/PlayerCharacter.h"
+#include "Kismet/GameplayStatics.h"
+#include "Enemy/BossEnemyAIController.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 AEnemyMeleeBoss::AEnemyMeleeBoss()
@@ -95,9 +100,13 @@ FName AEnemyMeleeBoss::GetAttackSectionName(int32 SectionCount)
 void AEnemyMeleeBoss::OnRightWeaponOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
     UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-    if (IsValid(SweepResult.GetActor()))
+    if (OtherActor == nullptr) return;
+
+    auto Character = Cast<APlayerCharacter>(OtherActor);
+
+    if (Character)
     {
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Hit Player"));
+        UGameplayStatics::ApplyDamage(Character, GetBaseDamage(), BossEnemyAIController, this, UDamageType::StaticClass());
     }
 }
 

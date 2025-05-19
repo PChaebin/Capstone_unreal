@@ -48,6 +48,7 @@ protected:
 		const FHitResult& SweepResult);
 	
 private:
+
 	// Montage for melee attacks
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	UAnimMontage* MeleeAttackMontage;
