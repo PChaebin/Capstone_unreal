@@ -38,13 +38,23 @@ APlayerCharacter::APlayerCharacter() :
 	// Jump
 	GetCharacterMovement()->JumpZVelocity = 500.f;
 	GetCharacterMovement()->AirControl = 0.1f;
+
+	RightWeaponCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("Right Weapon Box"));
+	RightWeaponCollision->SetupAttachment(GetMesh(), FName("RightWeaponBone"));
 }
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	RightWeaponCollision->OnComponentBeginOverlap.AddDynamic(this, &APlayerCharacter::OnRightWeaponOverlap);
 	
+	
+	RightWeaponCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RightWeaponCollision->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic);
+	RightWeaponCollision->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+	RightWeaponCollision->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
 }
 
 // Move forward and backward
@@ -134,7 +144,17 @@ void APlayerCharacter::EnableWalk()
 
 void APlayerCharacter::MainAttack()
 {
-	PlayAnimMontage(MainAttackMontage, 1.0f, FName("MainAttack"));
+	PlayCustomAnimMontage(MainAttackMontage, FName("MainAttack"));
+}
+
+void APlayerCharacter::OnRightWeaponOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+	bool bFromSweep, const FHitResult& SweepResult)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnRightWeaponOverlap called"));
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Apply damage"));
+	}
 }
 
 // Called to bind functionality to input
@@ -167,3 +187,14 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("MainAttack", IE_Pressed, this, &APlayerCharacter::MainAttack);
 }
 
+void APlayerCharacter::ActivateRightWeapon()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Activate Weapon"));
+	RightWeaponCollision->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+}
+
+void APlayerCharacter::DeactivateRightWeapon()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Deactivate Weapon"));
+	RightWeaponCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision); 
+}

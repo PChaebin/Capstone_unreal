@@ -3,8 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/BoxComponent.h"
 #include "GameFramework/Character.h"
-#include "PlayerCharacter/PlayerCharacterInterface.h"
 #include "PlayerCharacter.generated.h"
 
 //Declarations
@@ -13,7 +13,7 @@ class UCameraComponent;
 class UAnimMontage;
 
 UCLASS()
-class UNREAL_1_API APlayerCharacter : public ACharacter, public IPlayerCharacterInterface
+class UNREAL_1_API APlayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -23,6 +23,10 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void ActivateRightWeapon();
+	virtual void DeactivateRightWeapon();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -50,8 +54,16 @@ protected:
 
 	void EnableWalk();
 
-	//LMB main Attack
 	void MainAttack();
+
+	UFUNCTION()
+	void OnRightWeaponOverlap(
+		UPrimitiveComponent* OverlappedComponent,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult);
 
 private:
 	// Spring Arm Component
@@ -83,5 +95,8 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Montage", meta = (AllowPrivateAccess = "true"))
 	UAnimMontage* MainAttackMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
+	UBoxComponent* RightWeaponCollision;
 
 };
