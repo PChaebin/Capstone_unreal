@@ -25,6 +25,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void EnemyDeath();
+
 	// Enemy Controller
 	UPROPERTY()
 	ABossEnemyAIController* BossEnemyAIController;

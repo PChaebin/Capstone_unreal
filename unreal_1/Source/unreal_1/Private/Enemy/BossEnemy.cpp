@@ -39,7 +39,9 @@ float ABossEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent
 {
 	if (Health - DamageAmount <= 0.f)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Enemy Died"));
+		Health = 0.f;
+
+		EnemyDeath();
 	}
 	else
 	{
