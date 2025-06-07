@@ -1,10 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "Enemy/BossEnemy.h"
 #include "Components/BoxComponent.h"
+#include "NiagaraSystem.h"               
+#include "NiagaraFunctionLibrary.h"
 #include "EnemyMeleeBoss.generated.h"
 
 class UAnimMontage;
@@ -56,6 +58,12 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	UBoxComponent* RightWeaponCollision;
 
+	// Niagara Effects
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	UNiagaraSystem* SwingEffect;
+
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	UNiagaraSystem* ImpactEffect;
 
 	// Timer for playing attack montage
 	FTimerHandle TimerAttack;

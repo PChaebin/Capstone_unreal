@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Enemy/EnemyMeleeBoss.h"
@@ -45,28 +45,27 @@ void AEnemyMeleeBoss::BeginPlay()
 
 
 // Enemy melee attack montage
-void AEnemyMeleeBoss::MeleeAttack() {
-
+void AEnemyMeleeBoss::MeleeAttack()
+{
     UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
 
     if (AnimInstance && MeleeAttackMontage)
     {
-        // get number of montage section
         int32 const SectionCount = MeleeAttackMontage->CompositeSections.Num();
-
-        // Get random animation to play
-        // Get section index and playtime to use for the timer
         FName const SectionName = GetAttackSectionName(SectionCount);
         int32 const SectionIndex = MeleeAttackMontage->GetSectionIndex(SectionName);
         float const SectionLength = MeleeAttackMontage->GetSectionLength(SectionIndex);
 
-        // Disable enemy movement then re-enable after timer finishes
         GetCharacterMovement()->DisableMovement();
-
-        // Play montage section
         AnimInstance->Montage_Play(MeleeAttackMontage);
         AnimInstance->Montage_JumpToSection(SectionName, MeleeAttackMontage);
         GetWorldTimerManager().SetTimer(TimerAttack, this, &AEnemyMeleeBoss::ResetMovementWalking, SectionLength);
+
+        // [💥] Attack2일 때만 이펙트 실행
+        if (SectionName == "Attack2")
+        {
+
+        }
     }
 }
 
